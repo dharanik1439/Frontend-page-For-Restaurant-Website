@@ -1,0 +1,402 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(to right , #FFFAA0, #ffb3ff);
+
+}
+
+
+/* Navbar */
+.navbar {
+    background: #f06c6c;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: flex-end; /* Align to the right */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 30px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding-right: 40px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+
+.navbar ul li a:hover {
+    color: #f6f7ed; /* Accent color for hover */
+    border-radius: 12px;
+    border: #e05b5b;
+    text-underline-position: below;
+    font-size:22px;
+    
+}
+
+.menu-icon {
+    display: show; /* Hidden by default, shown on mobile */
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 20px;
+
+    
+}
+
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh; /* Adjust as needed */
+     /* Similar to design */
+    overflow: hidden; /* Prevent text overflow if content is too large */
+    /*background: linear-gradient(135deg, #FFFAA0, #ffb3ff);*/
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 50%;
+    padding:100px 100px 100px 80px;
+    text-align: left;
+}
+
+.hero-content h1 {
+    font-size: 3.0em;
+    margin-bottom: 60px;
+    margin-top:50px;
+    color:black;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 7px;
+}
+
+.hero-content p {
+    font-size:20px;
+    margin-bottom: 60px;
+    color: #555;
+    font-family: sans-serif;
+}
+
+.click-me-button {
+    background-color:#ff6b6b; /* Reddish button */
+    color:black;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.click-me-button:hover {
+    background-color:black;
+    color:whitesmoke;
+    transform:scale(1.1);
+}
+
+.hero-image-container {
+    flex: 1;
+    max-width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 100px;
+}
+
+.hero-image {
+    max-width:120%;
+    height:700%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Image Gallery Section */
+.image-gallery-section {
+    padding: 100px 50px 100px 50px;
+     /* Gradient similar to the design */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    /*background: linear-gradient(135deg, #FFFAA0, #ffb3ff);*/
+}
+
+.gradient-background {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-rows:1fr 1fr; 
+    grid-template-columns:1fr 1fr;/* Two rows */
+    gap: 20px;
+    flex: 1;
+    max-width: 50%; /* Take half width for grid */
+    padding-right: 30px;
+}
+.grid-item {
+
+    overflow:hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.grid-item.large-item{
+    grid-row: 1/3;
+    grid-column:2/3;
+}
+.grid-item img {
+    width: 300px;;
+    height: 255px;
+    object-fit:cover; /* Ensures images cover the area without stretching */
+    display: block; /* Remove extra space below image */
+
+}
+.image-grid :hover{
+    transform: scale(1.1);
+    transition: 0.6s;
+}
+.grid-item.large-item img{
+    width:300px;
+    height:530px;
+}
+/* Specific sizing for the large image in the grid */
+.grid-item large-item {
+    grid-column: span 2; /* Spans two columns */
+    /* Maintain aspect ratio if needed, or let object-fit handle */
+    height: 350px; /* Example fixed height for the large image, adjust as needed */
+}
+
+.promo-box {
+    flex: 1;
+    max-width: 50%; /* Take half width for promo box */
+    background-color: #ff6b6b; /* Red box background */
+    color: rgb(29, 28, 28);
+    padding:30px;
+    text-align:left;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-left: 70px;
+
+}
+
+.promo-subheading {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.promo-heading {
+    font-size: 3.2em;
+    line-height: 1.2;
+    letter-spacing: 4px;
+}
+
+.promo-link {
+    color: rgb(13, 12, 12);
+    text-decoration: none;
+    font-size: 1.5em;
+    display: inline-flex;
+    align-items: center;
+}
+.promo-link:hover{
+    background-color:white;
+    color:black;
+    transform:scale(1.2);
+    transition:0.5s;
+}
+.promo-link span {
+    margin-left: 0px;
+    font-size: 1.5em;
+}
+
+/* Responsive Design */
+
+/* Tablet and Smaller Desktops (e.g., up to 1024px) */
+@media (max-width: 1024px) {
+    .navbar nav {
+        padding: 0 15px;
+    }
+
+    .navbar ul li{
+        margin-left: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 3em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr; /* Single column for images */
+        max-width: 100%; /* Take full width */
+        padding-right: 0;
+        margin-bottom: 30px; /* Space between grid and promo box */
+    }
+
+    .grid-item.large-item {
+        grid-column: span 1; /* Reset to single column */
+        height: 50%; /* Let image natural height or object-fit define */
+    }
+
+    .promo-box {
+        max-width: 100%; /* Take full width */
+        margin-left: 0;
+        padding: 40px;
+    }
+
+    .image-gallery-section .gradient-background {
+        flex-direction: column; /* Stack image grid and promo box */
+    }
+}
+
+/* Mobile Devices (e.g., up to 768px) */
+@media (max-width: 768px) {
+    .navbar nav {
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .navbar ul {
+        display: none; /* Hide nav links by default */
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 60px; /* Below the header */
+        left: 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    .navbar ul.active {
+        display: flex; /* Show when active */
+    }
+
+    .navbar ul li {
+        margin: 10px 20px;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block; /* Show menu icon on mobile */
+    }
+
+    .hero-section {
+        flex-direction: column; /* Stack content and image */
+        text-align: center;
+        padding: 30px 15px;
+        min-height: auto;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 0.95em;
+    }
+
+    .hero-image-container {
+        max-width: 90%; /* Adjust image size for mobile */
+        padding-left: 0;
+    }
+
+    .promo-box {
+        padding: 30px;
+    }
+
+    .promo-heading {
+        font-size: 2em;
+    }
+}
+
+/* Extra Small Devices (e.g., up to 480px) */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+    .promo-heading {
+        font-size: 1.8em;
+    }
+    .click-me-button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+    .promo-box {
+        padding: 20px;
+    }
+}
+.hero-image {
+    /* Set the initial position off-screen to the left */
+    transform: translateX(-100%); 
+    
+    /* Apply the animation */
+    animation: slide-from-left 1.5s forwards;
+}
+
+@keyframes slide-from-left {
+    from {
+        /* Start position, completely off-screen */
+        transform: translateX(-100%); 
+    }
+    to {
+        /* End position, fully visible */
+        transform: translateX(0); 
+    }
+}
+.promo-box {
+    /* Set the initial position off-screen to the left */
+    transform: translateX(100%); 
+    
+    /* Apply the animation */
+    animation: slide-from-right 1.2s forwards;
+}
+
+@keyframes slide-from-right {
+    from {
+        /* Start position, completely off-screen */
+        transform: translateX(100%); 
+    }
+    to {
+        /* End position, fully visible */
+        transform: translateX(0); 
+    }
+}
